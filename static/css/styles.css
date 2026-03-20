@@ -1,0 +1,22 @@
+.h_bg{
+    background: radial-gradient(
+        circle at 30% 70%,
+        #ffb223 35%,
+        #ff8c1a 55%,
+        #ff6a00 68%,
+        #cc5200 78%,
+        #000000 100%
+    );
+    background-position: center;
+    background-size: cover;
+    background-repeat:  no-repeat;
+    height: 100vh;
+}
+.p:hover{
+    color: rgb(206, 3, 206);
+    transition: 0.3s;
+}
+
+.loc {
+    color: rgb(206, 3, 206);
+}
