@@ -1,4 +1,5 @@
 const currentPage = window.location.pathname // current page location
+console.log(currentPage);
 
 const pages = {
     '/': document.getElementById('home'),
@@ -7,5 +8,7 @@ const pages = {
 }
 
 if (pages[currentPage]){
-    pages[currentPage].classlist.add('.loc');
+    console.log('home page!')
+    console.log(pages[currentPage])
+    pages[currentPage].classList.add('loc');
 }

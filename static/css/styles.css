@@ -1,16 +1,8 @@
 .h_bg{
-    background: radial-gradient(
-        circle at 30% 70%,
-        #ffb223 35%,
-        #ff8c1a 55%,
-        #ff6a00 68%,
-        #cc5200 78%,
-        #000000 100%
-    );
+    background-image: url('https://res.cloudinary.com/dmzf7hvpd/image/upload/v1774004368/compressed_turned-gray-laptop-computer_resized_rpuqwa.png');
     background-position: center;
     background-size: cover;
     background-repeat:  no-repeat;
-    height: 100vh;
 }
 .p:hover{
     color: rgb(206, 3, 206);
@@ -18,5 +10,14 @@
 }
 
 .loc {
-    color: rgb(206, 3, 206);
+    color: rgb(206, 3, 206) !important;
+    border-bottom: 2px solid rgb(206, 3, 206);
+    background: rgba(206, 3, 206, 0.08);
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+.msg-btn{
+    border-radius: 20px;
+    border: none;
+    background-color:rgb(206, 3, 206);
 }
