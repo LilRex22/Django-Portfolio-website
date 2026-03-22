@@ -3,7 +3,8 @@
 
 
 {% block content %}
-<header class="" style="height: 100vh;">
+<!-- hero section -->
+<header class="mb-5" style="height: fit-content;">
     <div class="container min-vh-100 d-flex align-items-center">
 
         <div class="row gap-1 w-100 h-100 d-flex align-items-center justify-content-center mt-4 mt-lg-0">
@@ -23,12 +24,17 @@
                 <img class='img-fluid' src="{% static 'assets/me.png' %}" alt='profile_pic'>
 
                 <div class="container bg-white h-25 w-25 position-absolute" style="border-radius: 50%;"></div>
-                <div class="container bg-dark h-25 w-25 position-absolute" style="border-radius: 50%; left: 2px; border: 4px solid white;"></div>
+                <div class="container bg-dark h-25 w-25 position-absolute" style="border-radius: 50%; left: 2px; border: 4px solid white;">
+                    <img src="{% static 'assets/bot.png' %}" alt="bot" class="mt-lg-2 ms-lg-2 mt-1 ms-1">
+                </div>
             </div>
         </div>
     </div>
 </header>
 
+
+
+<!-- about me section -->
 <section class="bg-dark py-5">
     <!-- <div class="container-fluid bg-dark mt-4 p-3 d-flex justify-content-center" style="height: 14.5vh; gap: 8px;">
         <img src="{% static 'assets/js.png' %}" alt="js icon" class="img-fluid">
@@ -40,7 +46,7 @@
         <img src="{% static 'assets/react.svg' %}" alt="react icon" class="img-fluid">
     </div> -->
     <div class="container">
-        <h2 class="fw-bold text-start ms-5 mb-3 display-5 text-white">About Me</h2>
+        <h2 class="fw-bold text-start ms-5 mb-3 display-5 text-white" style="border-bottom: 5px solid rgb(206, 3, 206); width: fit-content;">About Me</h2>
         
         <div class="row justify-content-center">
             
@@ -50,9 +56,10 @@
                 <div class="container position-absolute bg-white" style="border-radius: 50%; top: 100px; left: 25px; height: 100px; width: 100px;"></div>
             </div>
                 
-            <div class="col-lg-6 p-4 bg-white" style="border-radius: 30px;">
+            <div class="col-lg-6 p-4 bg-white position-relative" style="border-radius: 30px;">
+                <img src="{% static 'assets/pin.png' %}" alt="pin" class="position-absolute" style="top: -30px; left: 45%;">
                 <p class="text-dark fw-bold mt-5">Hello I am Dunu Rex, I am a full stack web developer and the founder
-                    of Code.Rx online web development brand from Anambra state, Nigeria. 
+                    of Code<span style="color: rgb(206, 3, 206);">.Rx</span> online web development brand from Anambra state, Nigeria. 
                 </p>
                 <p class="text-dark mb-5">
                     I enjoy turning ideas into 
@@ -66,10 +73,76 @@
                 <p class="fw-bold text-dark">Date of Birth: <span class="ms-5">22nd January, 2005</span></p>
                 <p class="fw-bold text-dark">Nationality: <span class="ms-5">Nigerian</span></p>
                 <p class="fw-bold text-dark">Address: <span class="ms-5">No.12 Omodi Nzekwu street Onitsha</span></p>
+                <div class="container ps-0 d-flex align-items-center gap-2">
+                    <a href="" class="btn btn-outline-dark fw-bold" style="background-color:  rgb(206, 3, 206); border: none;">Hire me</a>
+                    <a class='btn btn-dark fw-bold border-2' href="">About Code<span style="color: rgb(206, 3, 206);">.Rx</span></a>
+                </div>
             </div>
 
         </div>
     </div>
 </section>
 
+
+<!-- services section -->
+<section class="mt-5">
+    <div class="container d-flex flex-column align-items-center">
+        <h2 class="text-center fw-bold display-5 my-5" style="border-bottom: 5px solid rgb(206, 3, 206); width: fit-content;">Services</h2>
+        
+        <!-- services grid system -->
+        <div class="row justify-content-center">
+            <div class="col-4 text-center gap-3 p-4 mt-3" style="box-shadow: 2px 5px 10px grey; border-radius: 10px;">
+                <img src="{% static 'assets/web_dev.png' %}" alt="web">
+                <h3>Website Development</h3>
+                <p>I build fast, responsive and modern websites from scratch tailored to your brand
+                    and business goals.
+                </p>
+            </div>
+
+            <div class="col-4 text-center gap-3 p-4 mt-3" style="box-shadow: 2px 5px 10px grey; border-radius: 10px;">
+                <img src="{% static 'assets/frontend.png' %}" alt="frontend">
+                <h3>Frontend Development</h3>
+                <p>
+                    I create clean, interactive user interfaces that provide a smooth and engaging user
+                    experience.
+                </p>
+            </div>
+
+            <div class="col-4 text-center gap-3 p-4 mt-3" style="box-shadow: 2px 5px 10px grey; border-radius: 10px;">
+                <img src="{% static 'assets/backend_dev.png' %}" alt="backend">
+                <h3>Backend Development</h3>
+                <p>
+                    I develop secure and efficient server-side systems, including databases and APIs to 
+                    power your applications.
+                </p>
+            </div>
+
+            <div class="col-4 text-center gap-3 p-4 mt-3" style="box-shadow: 2px 5px 10px grey; border-radius: 10px;">
+                <img src="{% static 'assets/ecommerce.png' %}" alt="ecommerce">
+                <h3>E-commerce Development</h3>
+                <p>
+                    I build online stores with seamless product management, secure checkouts and user-friendly
+                    shopping experiences.
+                </p>
+            </div>
+
+            <div class="col-4 text-center gap-3 p-4 mt-3" style="box-shadow: 2px 5px 10px grey; border-radius: 10px;">
+                <img src="{% static 'assets/api.png' %}" alt="Api">
+                <h3>API integration</h3>
+                <p>
+                    I connect your website to third-party services like payment systems and gateways, social
+                    platforms and external tools.
+                </p>
+            </div>
+
+            <div class="col-4 text-center gap-3 p-4 mt-3" style="box-shadow: 2px 5px 10px grey; border-radius: 10px;">
+                
+                <img src="{% static 'assets/web.png' %}" alt="web"><h3>Web Redesign</h3>
+                <p>
+                    I transform outdated websites into modern, visually appealing and mobile-friendly platforms.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
