@@ -57,16 +57,16 @@
                     functional digital experiences using clean and efficient code. I am constantly 
                     learning and improving with a focus on creating solutions that are performance-driven.
                 </p>
-            
-                <p class="fw-bold text-dark">Name: <span class="ms-5">Dunu Rex</span> </p>
-                <p class="fw-bold text-dark">Email: <span class="ms-5">dunuchukwuemeka22@gmail.com</span></p>
-                <p class="fw-bold text-dark">Phone: <span class="ms-5">+2348163417724</span></p>
-                <p class="fw-bold text-dark">Date of Birth: <span class="ms-5">22nd January, 2005</span></p>
-                <p class="fw-bold text-dark">Nationality: <span class="ms-5">Nigerian</span></p>
-                <p class="fw-bold text-dark">Address: <span class="ms-5">No.12 Omodi Nzekwu street Onitsha</span></p>
-                <div class="container ps-0 d-flex align-items-center gap-2">
-                    <a href="" class="btn btn-outline-dark fw-bold" style="background-color:  rgb(206, 3, 206); border: none;">Hire me</a>
-                    <a class='btn btn-dark fw-bold border-2' href="">About Code<span style="color: rgb(206, 3, 206);">.Rx</span></a>
+                <div class="container" style="display: grid; grid-template-columns: auto 1fr;">
+                    <span class="fw-bold text-dark mt-2">Name:</span> <span class="ms-4 fw-medium mt-2">Dunu Rex</span> </span>
+                    <span class="fw-bold text-dark mt-2">Email:</span> <span class="ms-4 fw-medium mt-2">dunuchukwuemeka22@gmail.com</span></span>
+                    <span class="fw-bold text-dark mt-2">Phone:</span> <span class="ms-4 fw-medium mt-2">+2348163417724</span></span>
+                    <span class="fw-bold text-dark mt-2">D.O.B:</span> <span class="ms-4 fw-medium mt-2">22nd January, 2005</span></span>
+                    <span class="fw-bold text-dark mt-2">Nationality:</span> <span class="ms-4 fw-medium mt-2">Nigerian</span></span>
+                    <span class="fw-bold text-dark mt-2">Address:</span> <span class="ms-4 fw-medium mt-2">No.12 Omodi Nzekwu street Onitsha</span></p>
+                </div>
+                <div class="container ps-0 mt-5">
+                    <a class='btn btn-dark fw-bold border-2' href="">Hire me</a>
                 </div>
             </div>
 
@@ -144,7 +144,7 @@
         <h3 class="text-center fw-bold display-6 my-5" style="border-bottom: 5px solid rgb(206, 3, 206); width: fit-content;">Featured Projects</h3>
         <div class="row justify-content-center w-100">
             {% for x in projects %}
-                <div class="col-lg-4 card p-0" style="border: none; box-shadow: 2px 5px 10px grey; border-radius: 10px;">
+                <div class="col-10 col-lg-4 card p-0" style="border: none; box-shadow: 2px 5px 10px grey; border-radius: 10px;">
                     <img src="{{x.Image.url}}" alt="project img" class="img-fluid rounded-2 card-img-top">
                     <h3 class="fw-bold mt-3 card-title ms-2">{{x.Name}}</h3>
                     <p class="card-text ms-2">{{x.Description}}</p>
@@ -153,7 +153,7 @@
                         <img src="{{x.Tech_stack2.url}}" alt="tech stack" class="img-fluid icons">
                         <img src="{{x.Tech_stack3.url}}" alt="tech stack" class="img-fluid icons">
                     </div>
-                <a href="{{x.Link}}" class="link-dark ms-2 mb-3">View</a>
+                <a href="{{x.Link}}" class="btn btn-outline-dark mx-2 mb-3" style="background-color:  rgb(206, 3, 206); border: none;">View</a>
                 </div>
             {% endfor %}
         </div>
@@ -162,34 +162,55 @@
 
 
 <!-- tech stack section -->
-<section>
+<section class="" style="margin-top: 100px;">
     <div class="container">
-        <h3 class="text-center fw-bold display-6 mt-5" style="border-bottom: 5px solid rgb(206, 3, 206); width: fit-content;">My Tech Stack</h3>
-        <div class="row">
-            <div class="col-6 bg-dark mt-4 p-3 d-flex flex-column justify-content-center">
-                <div class="container bg-white mt-3 p-3 rounded-4">
-                    <img src="{% static 'assets/js.png' %}" alt="js icon" class="img-fluid icons">
+        <h3 class="text-center fw-bold display-6 mt-5" style="border-bottom: 5px solid rgb(206, 3, 206); width: fit-content;">Tech Stack</h3>
+        <div class="row justify-content-center">
+            <div class="col-11 col-lg-6 bg-dark mt-4 p-3 d-flex flex-column justify-content-center rounded-5">
+                <div class="row justify-content-center gap-2">
 
+                    <div class="col-3 bg-white mt-3 p-3 rounded-4">
+                        <img src="{% static 'assets/js.png' %}" alt="js icon" class="img-fluid icons">
+                        <p class="fw-bold">Javascript</p>
+                    </div>
                     
+                    <div class="col-3 bg-white mt-3 p-3 rounded-4">
+                        <img src="{% static 'assets/django.png' %}" alt="django icon" class="img-fluid icons">
+                        <p class="fw-bold">Django</p>
+                    </div>
+                
+                    <div class="col-3 bg-white mt-3 p-3 rounded-4">
+                        <img src="{% static 'assets/python.png' %}" alt="python icon" class="img-fluid icons">
+                        <p class="fw-bold">Python</p>
+                    </div>
+                
+                    <div class="col-3 bg-white mt-3 p-3 rounded-4">
+                        <img src="{% static 'assets/bootstrap.png' %}" alt="bootstrap icon" class="img-fluid icons">
+                        <p class="fw-bold">Bootstrap</p>
+                    </div>
+                
+                    <div class="col-3 bg-white mt-3 p-3 rounded-4">
+                        <img src="{% static 'assets/html.svg' %}" alt="html icon" class="img-fluid icons">
+                        <p class="fw-bold">Html</p>
+                    </div>
+                
+                    <div class="col-3 bg-white mt-3 p-3 rounded-4">
+                        <img src="{% static 'assets/css.png' %}" alt="css icon" class="img-fluid icons">
+                        <p class="fw-bold">Css</p>
+                    </div>
+                
+                    <div class="col-3 bg-white mt-3 p-3 rounded-4">
+                        <img src="{% static 'assets/react.svg' %}" alt="react icon" class="img-fluid icons">
+                        <p class="fw-bold">React</p>
+                    </div>
+                
                 </div>
-                <div class="container bg-white mt-3 p-3 rounded-4">
-                    <img src="{% static 'assets/django.png' %}" alt="django icon" class="img-fluid icons">
-                </div>
-                <div class="container bg-white mt-3 p-3 rounded-4">
-                    <img src="{% static 'assets/python.png' %}" alt="python icon" class="img-fluid icons">
-                </div>
-                <div class="container bg-white mt-3 p-3 rounded-4">
-                    <img src="{% static 'assets/bootstrap.png' %}" alt="bootstrap icon" class="img-fluid icons">
-                </div>
-                <div class="container bg-white mt-3 p-3 rounded-4">
-                    <img src="{% static 'assets/html.svg' %}" alt="html icon" class="img-fluid icons">
-                </div>
-                <div class="container bg-white mt-3 p-3 rounded-4">
-                    <img src="{% static 'assets/css.png' %}" alt="css icon" class="img-fluid icons">
-                </div>
-                <div class="container bg-white mt-3 p-3 rounded-4">
-                    <img src="{% static 'assets/react.svg' %}" alt="react icon" class="img-fluid icons">
-                </div>
+            </div>
+        
+            <!-- call to action -->
+            <div class="col-12 col-lg-6 mt-3 mt-lg-0">
+                <h3 class="display-5 fw-bold text-end">I'm Available for Hire</h3>
+                <p class="text-end fs-3 fw-bold" style="color: rgb(206, 3, 206);">Let's Connect!</p>
             </div>
         </div>
     </div>
