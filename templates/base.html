@@ -13,10 +13,62 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Code.Rx.com</title>
 </head>
-<body>
+<body class="d-flex flex-column">
     {% include 'navbar.html' %}
     {% block content %}
     {% endblock %}
+
+    <footer class="bg-dark mt-auto">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10 col-lg-6 text-lg-end pe-lg-5 mb-3 mb-lg-0 text-center" style="border-right: 2px solid rgb(206, 3, 206); border-bottom: 2px solid rgb(206, 3, 206);">
+                <p class="text-white mt-3">Code.Rx &copy; 2026</p>
+                <p class="text-white mt-3">All Rights Reserved</p>
+            </div>
+            
+            <div class="col-12 col-lg-6 px-lg-5">
+                <div class="d-flex flex-column gap-3 align-items-center">
+                    
+                    <div class="d-flex gap-5">
+                        <p class="text-white"><i class="bi bi-house-fill me-2 fs-2" style="color: rgb(206, 3, 206);"></i>dunuchukwuemeka22@gmail.com</p>
+                        <p class="text-white"><i class="bi bi-telephone-fill me-2 fs-2" style="color: rgb(206, 3, 206);"></i>08163417724</p>
+                    </div>
+                    
+                    <div class="d-flex gap-3 align-items-center">
+                        <!-- social icons here -->
+                        <a href="" class="text-decoration-none">
+                            <img width="32" height="32" src="https://img.icons8.com/windows/32/github.png" alt="github"/>
+                        </a>
+                        
+                        <a href="" class="text-decoration-none">
+                            <img width="32" height="32" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin"/>
+                        </a>
+                        
+                        <a href="" class="text-decoration-none">
+                            <img width="32" height="32" src="https://img.icons8.com/softteal-gradient/24/whatsapp.png" alt="whatsapp"/>
+                        </a>
+                        
+                        <a href="" class="text-decoration-none">
+                            <img width="32" height="32" src="https://img.icons8.com/color/48/facebook-new.png" alt="facebook-new"/>
+                        </a>
+                        
+                        <a href="" class="text-decoration-none">
+                            <img width="32" height="32" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/>
+                        </a>
+                        
+                        <a href="" class="text-decoration-none">
+                            <img width="32" height="32" src="https://img.icons8.com/ios-filled/50/twitterx--v1.png" alt="twitterx--v1"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
     <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
+<!-- <div class="col-6 d-flex gap-3">
+    
+</div> -->
