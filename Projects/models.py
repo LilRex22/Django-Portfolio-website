@@ -9,6 +9,7 @@ class Project(models.Model):
     Tech_stack2 = models.ImageField(null=True, blank=True)
     Tech_stack3 = models.ImageField(null=True, blank=True)
     Link = models.CharField(max_length=255)
+    Github = models.CharField(null=True, blank=True)
     
     
     def __str__(self):
