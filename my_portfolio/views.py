@@ -11,3 +11,6 @@ def home(request):
 def projects(request):
     obj = Project.objects.all()
     return render(request, 'projects.html', {'projects': obj})
+
+def about(request):
+    return render(request, 'about.html', {})

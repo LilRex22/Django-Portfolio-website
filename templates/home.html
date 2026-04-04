@@ -20,12 +20,12 @@
                     <a class='btn btn-outline-dark mt-2 ms-2 text-white' style="background-color:  rgb(206, 3, 206); border: none;" href="{% url 'projects' %}">Projects</a>
                 </div>
             </div>
-            <div class="col-11 col-lg-5 d-flex justify-content-end position-relative h_bg mt-4 mt-lg-0" style="background-color:  rgb(206, 3, 206); border-radius: 40%;">
+            <div class="col-11 col-lg-5 d-flex justify-content-end position-relative h_bg mt-4 mt-lg-0" style="background-color:  rgb(206, 3, 206); border-radius: 40%; width: fit-content;">
                 <img class='img-fluid' src="{% static 'assets/me.png' %}" alt='profile_pic'>
 
                 <div class="container bg-white h-25 w-25 position-absolute" style="border-radius: 50%;"></div>
                 <div class="container bg-dark h-25 w-25 position-absolute" style="border-radius: 50%; left: 2px; border: 4px solid white;">
-                    <img src="{% static 'assets/bot.png' %}" alt="bot" class="mt-lg-2 ms-lg-2 mt-1 ms-1">
+                    <img src="{% static 'assets/bot.png' %}" alt="bot" class="mt-lg-4 ms-lg-3 mt-3 ms-2">
                 </div>
             </div>
         </div>
@@ -41,8 +41,8 @@
         
         <div class="row justify-content-center">
             
-            <div class="col-12 col-lg-6 position-relative" style="z-index: 0;">
-                <img src="{% static 'assets/another_me.png' %}" alt="another me" class="img-fluid" style="position: relative; z-index: 2;">
+            <div class="col-12 col-lg-6 position-relative d-flex justify-content-center" style="z-index: 0;">
+                <img src="{% static 'assets/another_me.png' %}" alt="another me" class="img-fluid ms-4" style="position: relative; z-index: 2;">
                 <div class="container h-75 w-75 position-absolute" style="background-color: rgb(206, 3, 206); border-radius: 50%; top: 145px; z-index: 1; border: 10px solid white;"></div>
                 <div class="container position-absolute bg-white" style="border-radius: 50%; top: 100px; left: 25px; height: 100px; width: 100px;"></div>
             </div>
@@ -66,7 +66,8 @@
                     <span class="fw-bold text-dark mt-2">Address:</span> <span class="ms-4 fw-medium mt-2">No.12 Omodi Nzekwu street Onitsha</span></p>
                 </div>
                 <div class="container ps-0 mt-5">
-                    <a class='btn btn-dark fw-bold border-2' href="">Hire me</a>
+                    <a class='btn btn-dark fw-bold border-2' href="">Download Resume</a>
+                    <a class="btn btn-outline-dark" style="background-color: white; color:black;" href="https://github.com/LilRex22"><img width="32" height="32" src="https://img.icons8.com/windows/32/github.png" alt="github"/>Github</a>
                 </div>
             </div>
 
@@ -209,10 +210,12 @@
         
             <!-- call to action -->
             <div class="col-12 col-lg-6 mt-3 mt-lg-0">
-                <h3 class="display-5 fw-bold text-end">I'm Available for Hire</h3>
-                <p class="text-end fs-3 fw-bold" style="color: rgb(206, 3, 206);">Let's Connect!</p>
+                <div class="container d-flex flex-column align-items-end">
+                    <h3 class="display-5 fw-bold text-end">I'm Available for Hire</h3>
+                    <p class="text-end fs-3 fw-bold" style="color: rgb(206, 3, 206); border-bottom: 4px solid rgb(68, 68, 68); width: fit-content; border-radius: 10px;">Let's Make it Happen!</p>
+                </div>
                 <img src="{% static 'assets/coding.svg' %}" alt="coding" class="img-fluid">
-                <a class='btn btn-outline-dark text-white mt-2 float-end' style="background-color:  rgb(206, 3, 206); border: none;" href="">Projects</a>
+                <a class='btn btn-outline-dark text-white mt-2 float-end' style="background-color:  rgb(206, 3, 206); border: none;" href="">Contact</a>
             </div>
         </div>
     </div>
