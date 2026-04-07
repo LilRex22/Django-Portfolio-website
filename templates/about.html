@@ -3,22 +3,44 @@
 
 {% block content %}
     <div class="container">
-        <header style="height: 100vh;">
+        <header>
             <div class="container">
-                <h1 class="text-center fw-bold display-4" style="margin-top: 20%;">About Us</h1>
-                <p class="text-center fw-bold fs-5">Code<span style="color: rgb(206, 3, 206);">.Rx</span></p>
-            </div>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-lg-6 col-12 d-flex flex-column justify-content-center">
+                        <h1 class="text-center fw-bold display-4" style="margin-top: 20%;">About Us</h1>
+                        <p class="text-center fw-bold fs-5">Code<span style="color: rgb(206, 3, 206);">.Rx</span></p>
+                        <h3 class="text-center mt-4 fw-bold" style="color: rgb(206, 3, 206);"><i><span style="color: black;">Let's</span> Make It Happen.</i></h3>
+                        <div class="container d-flex justify-content-center mt-4">
+                            <a class="btn btn-dark" href="">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 position-relative mt-5 mt-lg-0">
+                        <img src="{% static 'assets/about.png' %}" alt="About Us" class="img-fluid">
+                        <div class="h-100 w-100 position-absolute ms-3 ms-lg-0" style="background-color: rgb(206, 3, 206); border-radius: 50%; top: 0; left: -3%; z-index: -1;"></div>
+                    </div>
+                </div>
         </header>
     
         <!-- the main section -->
-        <section>
+        <section class="mt-5">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-6">
-                        <h2>Our Mission</h2>
+                        <h2 class="fw-bold" style="color: rgb(206, 3, 206);">Who We Are</h2>
+                        <p class="mt-4">
+                            We are a forward-thinking web development brand driven by innovation, precision and creativity.
+                            We blend technical expertise with a human-centered approach, making us both reliable engineers and creative 
+                            problem-solvers.
+                        </p>
                     </div>
                     <div class="col-6">
-
+                        
+                </div>
+            
+                <div class="row justify-content-center">
+                    <h2 class="fw-bold display-3">Innovative</h2>
+                        <h2 class="fw-bold display-5">Collaborative</h2>
+                        <h2 class="fw-bold display-6">User-Focused</h2>
                     </div>
                 </div>
             </div>
