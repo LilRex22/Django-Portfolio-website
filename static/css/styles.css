@@ -38,3 +38,29 @@
     max-width: 160px;
     object-fit: contain;
 }
+
+.responsive-border {
+    position: relative;
+}
+
+.responsive-border::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: 0;
+    height: 2px;
+    background: black;
+}
+
+/* Large screens and up → switch to right border */
+@media (min-width: 992px) {
+    .responsive-border::after {
+        top: 15%;
+        bottom: 15%;
+        right: 0;
+        width: 2px;
+        height: auto;
+        left: auto;
+    }
+}

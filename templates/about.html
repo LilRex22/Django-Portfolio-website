@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block content %}
-    <div class="container">
         <header>
             <div class="container">
                 <div class="row justify-content-center mt-4">
@@ -11,7 +10,7 @@
                         <p class="text-center fw-bold fs-5">Code<span style="color: rgb(206, 3, 206);">.Rx</span></p>
                         <h3 class="text-center mt-4 fw-bold" style="color: rgb(206, 3, 206);"><i><span style="color: black;">Let's</span> Make It Happen.</i></h3>
                         <div class="container d-flex justify-content-center mt-4">
-                            <a class="btn btn-dark" href="">Get In Touch</a>
+                            <a class="btn btn-dark" href="{% url 'contact' %}">Get In Touch</a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-12 position-relative mt-5 mt-lg-0">
@@ -19,31 +18,73 @@
                         <div class="h-100 w-100 position-absolute ms-3 ms-lg-0" style="background-color: rgb(206, 3, 206); border-radius: 50%; top: 0; left: -3%; z-index: -1;"></div>
                     </div>
                 </div>
+            </div>
         </header>
     
         <!-- the main section -->
         <section class="mt-5">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-12 text-center text-lg-start">
                         <h2 class="fw-bold" style="color: rgb(206, 3, 206);">Who We Are</h2>
                         <p class="mt-4">
                             We are a forward-thinking web development brand driven by innovation, precision and creativity.
                             We blend technical expertise with a human-centered approach, making us both reliable engineers and creative 
                             problem-solvers.
                         </p>
-                    </div>
-                    <div class="col-6">
                         
-                </div>
-            
-                <div class="row justify-content-center">
-                    <h2 class="fw-bold display-3">Innovative</h2>
-                        <h2 class="fw-bold display-5">Collaborative</h2>
-                        <h2 class="fw-bold display-6">User-Focused</h2>
+                        <div class="mt-5">
+                            <h2 class="fw-bold display-3"><span class="me-3" style="color: rgb(206, 3, 206);">-</span>Innovative</h2>
+                            <h2 class="fw-bold display-5"><span class="me-3" style="color: rgb(206, 3, 206);">-</span>Collaborative</h2>
+                            <h2 class="fw-bold display-6"><span class="me-3" style="color: rgb(206, 3, 206);">-</span>User-Focused</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <img class="img-fluid" src="{% static 'assets/idea.svg' %}" alt="">
                     </div>
                 </div>
             </div>
         </section>
-    </div>
+
+        <!-- vision and mission statement -->
+        <section>
+            <div class="container bg-dark p-5 mb-2">
+                <div class="bg-white d-flex rounded-4 pt-4 flex-column flex-lg-row">
+                    <div class="p-5 responsive-border">
+                        <h2>
+                            <img src="https://img.icons8.com/?size=100&id=RTvj6qnHkz2P&format=png&color=000000" alt="mission" class="me-2" style="height: 42px; width: 42px;">
+                            Our Mission</h2>
+                        <p>
+                            To prescribe smart, reliable and innovative code and websites that solve real-world
+                            problems and drive digital success.
+                        </p>
+                    </div>
+                    <div class="p-5">
+                        <h2>
+                            <img src="https://img.icons8.com/?size=100&id=p3mSZ7G9s33Q&format=png&color=000000" alt="vision" class="me-2" style="height: 42px; width: 42px;">
+                            Our Vision</h2>
+                        <p>
+                            To redefine how technology solves problems by becoming a leading force in delivering 
+                            intelligent, future-ready digital solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <!-- call to action -->
+    <section>
+        <div class="container">
+            <div class="d-flex flex-lg-row flex-column align-items-center text-lg-start text-center gap-4">
+                <div class="container">
+                    <img src="{% static 'assets/connect.svg' %}" alt="" class="img-fluid">
+                </div>
+                <div class="">
+                    <h2 class="fw-bold display-4">Connect With Us Today</h2>
+                    <h3 class="fw-bold" style="color: rgb(206, 3, 206);">Let's Make It Happen!</h3>
+                    <a href="{% url 'contact' %}" class="btn btn-dark my-3">Contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
