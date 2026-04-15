@@ -15,6 +15,7 @@
 
                     <!-- MAIN IMAGE -->
                     <img 
+                        loading="lazy"
                         class="img-fluid w-100 position-relative z-2" 
                         src="{% static 'assets/me3.png' %}" 
                         alt="profile">
@@ -77,7 +78,7 @@
                     style="background-color: white; color:black; border: 2px solid black;"
                     href="https://github.com/LilRex22">
 
-                    <img width="24" height="24"
+                    <img loading="lazy" width="24" height="24"
                         src="https://img.icons8.com/windows/32/github.png"
                         alt="github"/>
 
@@ -94,20 +95,20 @@
         <div class="container">
             {% for project in projects %}
                 <div class="container p-3 d-flex flex-column flex-lg-row align-items-center align-items-lg-start" style="box-shadow: 2px 5px 10px grey;">
-                    <img class="img-fluid rounded-3" src="{{project.Image.url}}" alt="project img" style="width: 25rem;">
+                    <img loading="lazy" class="img-fluid rounded-3" src="{{project.Image.url}}" alt="project img" style="width: 25rem;">
                     <div class="container ms-lg-3 d-flex flex-column">
                         <h2 class="">{{project.Name}}</h2>
                         <p class="mt-4">{{project.Description}}</p>
                         
                         <div class="container ps-0 mb-3">
-                            <img src="{{project.Tech_stack1.url}}" alt="">
-                            <img src="{{project.Tech_stack2.url}}" alt="">
-                            <img src="{{project.Tech_stack3.url}}" alt="">
+                            <img loading="lazy" src="{{project.Tech_stack1.url}}" alt="">
+                            <img loading="lazy" src="{{project.Tech_stack2.url}}" alt="">
+                            <img loading="lazy" src="{{project.Tech_stack3.url}}" alt="">
                         </div>
                         
                         <div class="container ps-0">
-                            <a class="btn btn-info" href="" style="background-color: rgb(206, 3, 206); border: none;"><img width="32" height="32" src="https://img.icons8.com/sf-regular/48/play.png" alt="play"/>View live</a>
-                            <a class="btn btn-outline-dark" style="background-color: white; color:black;" href=""><img width="32" height="32" src="https://img.icons8.com/windows/32/github.png" alt="github"/>View on Github</a>
+                            <a class="btn btn-info" href="" style="background-color: rgb(206, 3, 206); border: none;"><img loading="lazy" width="32" height="32" src="https://img.icons8.com/sf-regular/48/play.png" alt="play"/>View live</a>
+                            <a class="btn btn-outline-dark" style="background-color: white; color:black;" href=""><img loading="lazy" width="32" height="32" src="https://img.icons8.com/windows/32/github.png" alt="github"/>View on Github</a>
                         </div>
                     </div>
                 </div>
