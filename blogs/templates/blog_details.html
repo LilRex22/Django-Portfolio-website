@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container mb-4">
+        <div class="container">
+            <div class="container-fluid ps-0">
+                <img src="{{ blog.Image.url }}" alt="{{ blog.Title }}" class="img-fluid">
+            </div>
+            <h1 class="my-4">{{ blog.Title }}</h1>
+            <p>{{ blog.Description }}</p>
+            <div class="my-3 d-flex align-items-center" style="border-radius: 50%;">
+                <img src="{% static 'assets/me.png' %}" alt="profile" class="img-fluid rounded-circle" style="width: 70px; height: 70px;">
+                <div class="ms-2">
+                    <p class="mb-0 mt-3 fw-bold">Dunu Rex</p>
+                    <p class="text-muted">Founder Code.Rx</p>
+                </div>
+            </div>
+            <p class="text-muted">
+                <i class="bi bi-calendar"></i>
+                {{ blog.Created_at }}
+            </p>
+        </div>
+        <a href="{% url 'blogs' %}" class="btn btn-primary" style="background-color:  rgb(206, 3, 206); border: none;">Back to Blogs</a>
+    </div>
+{% endblock %}
