@@ -1,9 +1,10 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Blog(models.Model):
     Title=models.CharField(max_length=100)
-    Image=models.ImageField()
+    Image=CloudinaryField('image', resource_type='image', folder='blog')
     Description=models.CharField()
     Created_at=models.DateTimeField(auto_now=True)
     

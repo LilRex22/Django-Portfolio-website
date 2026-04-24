@@ -1,13 +1,15 @@
 from django.shortcuts import render
 from Projects.models import Project
+from Projects.models import Profile
 from django.core.mail import EmailMessage
 from django.conf import settings
 
 
 def home(request):
     obj = Project.objects.all()
+    obj2 = Profile.objects.first()
     obj3 = obj[:3]
-    return render(request, 'home.html', {'projects': obj})
+    return render(request, 'home.html', {'projects': obj, 'profile': obj2})
 
 def projects(request):
     obj = Project.objects.all()
