@@ -2,25 +2,65 @@
 {% load static %}
 
 {% block content %}
-    <div class="container mb-4">
-        <div class="container">
-            <div class="container-fluid ps-0">
-                <img src="{{ blog.Image.url }}" alt="{{ blog.Title }}" class="img-fluid">
-            </div>
-            <h1 class="my-4">{{ blog.Title }}</h1>
-            <p>{{ blog.Description }}</p>
-            <div class="my-3 d-flex align-items-center" style="border-radius: 50%;">
-                <img src="{% static 'assets/me.png' %}" alt="profile" class="img-fluid rounded-circle" style="width: 70px; height: 70px;">
-                <div class="ms-2">
-                    <p class="mb-0 mt-3 fw-bold">Dunu Rex</p>
-                    <p class="text-muted">Founder Code.Rx</p>
-                </div>
-            </div>
-            <p class="text-muted">
-                <i class="bi bi-calendar"></i>
-                {{ blog.Created_at }}
-            </p>
+
+<div class="container mb-4 js-blog-detail">
+
+    <!-- ================= HERO IMAGE ================= -->
+    <div class="container">
+
+        <div class="container-fluid ps-0 js-blog-detail-image">
+            <img src="{{ blog.Image.url }}"
+                 alt="{{ blog.Title }}"
+                 class="img-fluid">
         </div>
-        <a href="{% url 'blogs' %}" class="btn btn-primary" style="background-color:  rgb(206, 3, 206); border: none;">Back to Blogs</a>
+
+        <!-- ================= TITLE ================= -->
+        <h1 class="my-4 js-blog-detail-title">
+            {{ blog.Title }}
+        </h1>
+
+        <!-- ================= CONTENT ================= -->
+        <p class="js-blog-detail-text">
+            {{ blog.Description }}
+        </p>
+
+        <!-- ================= AUTHOR SECTION ================= -->
+        <div class="my-3 d-flex align-items-center js-blog-author">
+
+            <img src="{% static 'assets/me.png' %}"
+                 alt="profile"
+                 class="img-fluid rounded-circle"
+                 style="width: 70px; height: 70px;">
+
+            <div class="ms-2">
+
+                <p class="mb-0 mt-3 fw-bold js-blog-author-name">
+                    Dunu Rex
+                </p>
+
+                <p class="text-muted js-blog-author-role">
+                    Founder Code.Rx
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ================= DATE ================= -->
+        <p class="text-muted js-blog-date">
+            <i class="bi bi-calendar"></i>
+            {{ blog.Created_at }}
+        </p>
+
     </div>
+
+    <!-- ================= BACK BUTTON ================= -->
+    <a href="{% url 'blogs' %}"
+       class="btn btn-primary js-blog-back"
+       style="background-color: rgb(206, 3, 206); border: none;">
+        Back to Blogs
+    </a>
+
+</div>
+
 {% endblock %}

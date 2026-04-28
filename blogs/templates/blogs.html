@@ -2,30 +2,78 @@
 {% load static %}
 
 {% block content %}
-    <div class="container">
-        <div class="row d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">   
-            <div class="col-lg-8 col-12">
-                <img src="{% static 'assets/blog.svg' %}" alt="" class="img-fluid">
-            </div>
+
+<div class="container">
+
+    <!-- ================= HERO SECTION ================= -->
+    <div class="row d-flex flex-column justify-content-center align-items-center"
+         style="height: 100vh; padding-top: 100px">
+
+        <div class="col-lg-8 col-12 text-center js-blog-hero">
+
+            <img src="{% static 'assets/blog.svg' %}"
+                 alt="blog hero"
+                 class="img-fluid js-blog-hero-image">
+
+            <h2 class="fw-bold display-5 mt-4 js-blog-hero-text">
+                Insights, Tutorials & Ideas
+            </h2>
+
+            <p class="text-muted js-blog-hero-sub">
+                Learn. Build. Improve.
+            </p>
+
         </div>
 
-        <!-- the blogs section -->
-        <section>
-            <div class="container">
-                <div class="row my-4 justify-content-center">
-                        {% for x in blogs %}
-                            <div class="card shadow" style="width: 20rem;">
-                                <img src="{{ x.Image.url }}" class="card-img-top" alt="{{ x.Title }}">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{x.Title}}</h5>
-                                    <p class="card-text">{{x.Description | truncatewords:20}}...</p>
-                                    <a href="{% url 'blog_detail' x.id %}">Read more</a>
-                                    <p class="text-muted">{{x.Created_at}}</p>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </div>
-            </div>
-        </section>
     </div>
+
+
+    <!-- ================= BLOG SECTION ================= -->
+    <section style="padding: 100px 0;">
+
+        <div class="container">
+
+            <div class="row my-4 justify-content-center">
+
+                {% for x in blogs %}
+
+                <!-- BLOG CARD -->
+                <div class="card shadow js-blog-card"
+                     style="width: 20rem; margin: 12px;">
+
+                    <img src="{{ x.Image.url }}"
+                         class="card-img-top"
+                         alt="{{ x.Title }}">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">{{ x.Title }}</h5>
+
+                        <p class="card-text">
+                            {{ x.Description | truncatewords:20 }}...
+                        </p>
+
+                        <a href="{% url 'blog_detail' x.id %}"
+                           class="js-blog-link">
+                            Read more
+                        </a>
+
+                        <p class="text-muted">
+                            {{ x.Created_at }}
+                        </p>
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
 {% endblock %}

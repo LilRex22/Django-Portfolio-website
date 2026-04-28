@@ -1,45 +1,128 @@
 {% extends 'base.html' %}
 {% load static %}
-    
+
 {% block content %}
-    <div class="container">
-        <div class="row justify-content-center mt-5">
-            <div class="col-lg-6 col-12 justify-content-center d-flex align-items-center flex-column mb-5">
-                <img src="{% static 'assets/contact.svg' %}" class="img-fluid w-75 w-md-50" loading="lazy" alt="contact">
-                <h3 class="fw-bold display-6 ms-4">Contact Us <br><span style="color: rgb(206, 3, 206);">Now!</span></h3>
-            </div>
-            <div class="col-lg-6 col-12">
-                <form method="post" class="bg-light p-4 rounded position-relative"> {% csrf_token %}
-                    <img src="{% static 'assets/pin.png' %}" alt="pin" class="position-absolute" style="top: -30px; left: 47%;">
-                    <h2 class="text-center fw-bold my-5">Send Us An Email!</h2>
-                    <input type="text" class="form-control mb-3" placeholder="Your Name" name="name" required>
-                    <input type="email" class="form-control mb-3" placeholder="Your Email" name="email" required>
-                    <textarea class="form-control mb-3" placeholder="Your Message" name="message" required></textarea>
-                    <button type="submit" class="btn btn-dark msg-btn my-3">Send Message</button>
-                </form>
-            </div>
-        </div>
-        
-        <div class="row justify-content-center mt-5">
-            <div class="col-lg-6 p-4 bg-light rounded mb-5 position-relative" style="width: fit-content;">
-                <img src="{% static 'assets/pin.png' %}" alt="pin" class="position-absolute" style="top: -30px; left: 47%;">
-                <h2 class="fw-bold display-6 mb-4">Give Us A Call</h2>
-                <p class="fw-bold lead">
-                    <i class="bi bi-telephone-fill fs-3 me-2" style="color: rgb(206, 3, 206);"></i>
-                    +234 816 341 7724</p>
-                <p class="fw-bold lead">
-                    <i class="bi bi-telephone-fill fs-3 me-2" style="color: rgb(206, 3, 206);"></i>
-                    +234 915 701 4656</p>
-            </div>
-    
-            <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center">
-                <h2>Let's Talk On Whatsapp</h2>
-                <a href="https://wa.me/08163417724" class="btn btn-success">
-                    <img loading="lazy" width="32" height="32" src="https://img.icons8.com/softteal-gradient/24/whatsapp.png" alt="whatsapp"/>
-                    Chat Us Now</a>
-            </div>
+
+<div class="container">
+
+    <!-- ================= HERO SECTION ================= -->
+    <div class="row justify-content-center mt-5">
+
+        <!-- IMAGE + TITLE -->
+        <div class="col-lg-6 col-12 justify-content-center d-flex align-items-center flex-column mb-5">
+
+            <img src="{% static 'assets/contact.svg' %}"
+                 class="img-fluid w-75 w-md-50 js-contact-hero-image"
+                 loading="lazy"
+                 alt="contact">
+
+            <h3 class="fw-bold display-6 ms-4 js-contact-hero-text">
+                Contact Us <br>
+                <span style="color: rgb(206, 3, 206);">Now!</span>
+            </h3>
+
         </div>
 
+        <!-- FORM -->
+        <div class="col-lg-6 col-12">
+
+            <form method="post"
+                  class="bg-light p-4 rounded position-relative js-contact-form">
+
+                {% csrf_token %}
+
+                <img src="{% static 'assets/pin.png' %}"
+                     alt="pin"
+                     class="position-absolute js-contact-pin"
+                     style="top: -30px; left: 47%;">
+
+                <h2 class="text-center fw-bold my-5 js-contact-title">
+                    Send Us An Email!
+                </h2>
+
+                <input type="text"
+                       class="form-control mb-3 js-contact-input"
+                       placeholder="Your Name"
+                       name="name"
+                       required>
+
+                <input type="email"
+                       class="form-control mb-3 js-contact-input"
+                       placeholder="Your Email"
+                       name="email"
+                       required>
+
+                <textarea class="form-control mb-3 js-contact-input"
+                          placeholder="Your Message"
+                          name="message"
+                          required></textarea>
+
+                <button type="submit"
+                        class="btn btn-dark msg-btn my-3 js-contact-btn">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
 
     </div>
+
+
+    <!-- ================= CONTACT INFO ================= -->
+    <div class="row justify-content-center mt-5">
+
+        <!-- PHONE CARD -->
+        <div class="col-lg-6 p-4 bg-light rounded mb-5 position-relative js-contact-card"
+             style="width: fit-content;">
+
+            <img src="{% static 'assets/pin.png' %}"
+                 alt="pin"
+                 class="position-absolute"
+                 style="top: -30px; left: 47%;">
+
+            <h2 class="fw-bold display-6 mb-4 js-contact-info-title">
+                Give Us A Call
+            </h2>
+
+            <p class="fw-bold lead js-contact-phone">
+                <i class="bi bi-telephone-fill fs-3 me-2"
+                   style="color: rgb(206, 3, 206);"></i>
+                +234 816 341 7724
+            </p>
+
+            <p class="fw-bold lead js-contact-phone">
+                <i class="bi bi-telephone-fill fs-3 me-2"
+                   style="color: rgb(206, 3, 206);"></i>
+                +234 915 701 4656
+            </p>
+
+        </div>
+
+
+        <!-- WHATSAPP SECTION -->
+        <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center mb-5">
+
+            <h2 class="js-contact-whatsapp-title">
+                Let's Talk On Whatsapp
+            </h2>
+
+            <a href="https://wa.me/08163417724"
+               class="btn btn-success js-contact-whatsapp-btn">
+
+                <img loading="lazy"
+                     width="32"
+                     height="32"
+                     src="https://img.icons8.com/softteal-gradient/24/whatsapp.png"
+                     alt="whatsapp"/>
+
+                Chat Us Now
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
 {% endblock %}
