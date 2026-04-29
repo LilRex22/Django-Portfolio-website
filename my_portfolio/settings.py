@@ -27,10 +27,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['django-portfolio-website-production.up.railway.app', 'https://django-portfolio-website-production.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['django-portfolio-website-production.up.railway.app', 'https://django-portfolio-website-production.up.railway.app']
+ALLOWED_HOSTS = ['django-portfolio-website-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://django-portfolio-website-production.up.railway.app']
 
 
 # Application definition
@@ -93,9 +93,7 @@ WSGI_APPLICATION = 'my_portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        "default": dj_database_url.parse(config("DATABASE_URL"))
-    }
+    'default': dj_database_url.parse(config("DATABASE_URL"))
 }
 
 
@@ -150,22 +148,22 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = "smtp-relay.brevo.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER', default=None)
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default=None)
 DEFAULT_FROM_EMAIL = "Code.Rex.com"
 EMAIL_TIMEOUT = 30
 
 # Cloudinary settings
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': config('CLOUD_NAME'),
-    'API_KEY': config('CLOUDINARY_API_KEY'),
-    'API_SECRET': config('CLOUDINARY_API_SECRET'),
+    'CLOUD_NAME': config('CLOUD_NAME', default=None),
+    'API_KEY': config('CLOUDINARY_API_KEY', default=None),
+    'API_SECRET': config('CLOUDINARY_API_SECRET', default=None),
 }
 
 cloudinary.config(
-    cloud_name=config('CLOUD_NAME'),
-    api_key=config('CLOUDINARY_API_KEY'),
-    api_secret=config('CLOUDINARY_API_SECRET'),
+    cloud_name=config('CLOUD_NAME', default=None),
+    api_key=config('CLOUDINARY_API_KEY', default=None),
+    api_secret=config('CLOUDINARY_API_SECRET', default=None),
     secure=True
 )
 
