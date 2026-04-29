@@ -1,0 +1,66 @@
+.h_bg{
+    background-image: url('https://res.cloudinary.com/dmzf7hvpd/image/upload/v1774004368/compressed_turned-gray-laptop-computer_resized_rpuqwa.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat:  no-repeat;
+}
+.h_bg2{
+    background-image: url('../assets/bg-dev.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.p:hover{
+    color: rgb(206, 3, 206);
+    transition: 0.3s;
+}
+
+.loc {
+    color: rgb(206, 3, 206) !important;
+    border-bottom: 2px solid rgb(206, 3, 206);
+    background: rgba(206, 3, 206, 0.08);
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+.msg-btn{
+    border-radius: 20px;
+    border: none;
+    background-color:rgb(206, 3, 206);
+}
+
+.icons{
+    width: 50px;
+    height: 50px;
+}
+.logo-img {
+    height: 58px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+}
+
+.responsive-border {
+    position: relative;
+}
+
+.responsive-border::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: 0;
+    height: 2px;
+    background: black;
+}
+
+/* Large screens and up → switch to right border */
+@media (min-width: 992px) {
+    .responsive-border::after {
+        top: 15%;
+        bottom: 15%;
+        right: 0;
+        width: 2px;
+        height: auto;
+        left: auto;
+    }
+}

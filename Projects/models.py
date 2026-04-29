@@ -5,12 +5,12 @@ from cloudinary.models import CloudinaryField
 class Project(models.Model):
     Image = CloudinaryField('image', resource_type='image', folder='profile')
     Name = models.CharField(max_length=100)
-    Description = models.TextField()
+    Description = models.TextField(max_length=500)
     Tech_stack1 = CloudinaryField('image', resource_type='image', folder='techstack', null=True, blank=True)
     Tech_stack2 = CloudinaryField('image', resource_type='image', folder='techstack', null=True, blank=True)
     Tech_stack3 = CloudinaryField('image', resource_type='image', folder='techstack', null=True, blank=True)
     Link = models.CharField(max_length=255)
-    Github = models.CharField(null=True, blank=True)
+    Github = models.CharField(null=True, blank=True, max_length=255)
     
     
     def __str__(self):
