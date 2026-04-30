@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 from django.conf.urls.static import static
-from . import settings
+from django.conf import settings
 from blogs import views as blog
 
 urlpatterns = [
@@ -29,4 +29,4 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('Blogs/', blog.Blogs, name='blogs'),
     path('Blogs/<str:pk>/', blog.Blog_detail, name='blog_detail'),
-]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
