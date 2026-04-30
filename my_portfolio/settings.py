@@ -29,8 +29,8 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['django-portfolio-website-production.up.railway.app', ".railway.app"]
-CSRF_TRUSTED_ORIGINS = ['https://django-portfolio-website-production.up.railway.app', "https://*.railway.app"]
+ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['*']
 
 
 # Application definition
