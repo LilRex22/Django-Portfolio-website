@@ -29,8 +29,8 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['*']
+ALLOWED_HOSTS = ['django-portfolio-website-production.up.railway.app', ".railway.app"]
+CSRF_TRUSTED_ORIGINS = ['https://django-portfolio-website-production.up.railway.app', "https://*.railway.app"]
 
 
 # Application definition
@@ -93,10 +93,7 @@ WSGI_APPLICATION = 'my_portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(config("DATABASE_URL"))
 }
 
 
